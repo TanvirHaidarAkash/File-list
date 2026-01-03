@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Contact Directory</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f7f6; }
+        h2 { color: #2c3e50; text-align: center; }
+        #searchBar { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #3498db; color: white; }
+        tr:hover { background-color: #f1f1f1; }
+        @media screen and (max-width: 600px) {
+            table, thead, tbody, th, td, tr { display: block; }
+            th { display: none; }
+            tr { margin-bottom: 15px; border: 1px solid #ccc; }
+            td { text-align: right; padding-left: 50%; position: relative; }
+            td::before { content: attr(data-label); position: absolute; left: 10px; font-weight: bold; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Professional Directory</h2>
+    
+    <input type="text" id="searchBar" onkeyup="filterTable()" placeholder="Search for names, workplaces, or blood groups...">
+
+    <table id="contactTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Workplace</th>
+                <th>Blood Group</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Name">Md. Naeem Uddin</td>
+                <td data-label="Workplace">Ibrahim Cardiac Hospital & Research Institute</td>
+                <td data-label="Blood Group">(+ve)</td>
+                <td data-label="Contact">01893676342</td>
+            </tr>
+            <tr>
+                <td data-label="Name">Md. Naim Hasan</td>
+                <td data-label="Workplace">Cure Specialized Hospital Ltd.</td>
+                <td data-label="Blood Group">(+ve)</td>
+                <td data-label="Contact">01631013534</td>
+            </tr>
+            <tr>
+                <td data-label="Name">
+                  
